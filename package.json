@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --require babel-core/register ./test/**/*.test.js",
+    "test": "cross-env NODE_ENV=test mocha --require babel-core/register ./test/**/*.test.js",
     "predev": "rimraf dist .cache",
     "dev": "parcel index.html"
   },
@@ -19,6 +19,7 @@
     "babel-preset-env": "^1.7.0",
     "mocha": "^5.2.0",
     "parcel-bundler": "^1.8.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "cross-env": "^5.1.6"
   }
 }
